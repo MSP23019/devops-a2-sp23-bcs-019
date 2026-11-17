@@ -1,0 +1,84 @@
+/* Muhammad Saad — Sp23-Bcs-019
+   Dark theme with Android-green accents */
+
+:root {
+  --bg: #0f1115;
+  --card: #171b21;
+  --text: #e8eaed;
+  --muted: #9aa0a6;
+  --accent: #3ddc84;      /* Android green */
+  --border: #262c34;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 56px 20px 32px;
+  background: linear-gradient(180deg, #131820, var(--bg));
+  border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+  font-size: 2.2rem;
+  letter-spacing: 0.5px;
+}
+
+.roll {
+  margin-top: 8px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+}
+
+.card h2 {
+  color: var(--accent);
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  padding: 20px;
+  border-top: 1px solid var(--border);
+}
