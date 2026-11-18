@@ -1,31 +1,476 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muhammad Saad | Sp23-Bcs-019</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Muhammad Saad — Android developer building clean, reliable mobile apps with Kotlin, Coroutines and modern Android architecture.">
+<meta name="theme-color" content="#070a10">
+<title>Muhammad Saad — Android Developer</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%233ddc84'/%3E%3Ctext x='32' y='45' font-family='system-ui,sans-serif' font-size='34' font-weight='700' text-anchor='middle' fill='%23081410'%3ES%3C/text%3E%3C/svg%3E">
+
+<script>
+  try {
+    var saved = localStorage.getItem('saad-theme');
+    if (saved) {
+      document.documentElement.dataset.theme = saved;
+    } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+      document.documentElement.dataset.theme = 'light';
+    }
+  } catch (e) {}
+</script>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header>
-    <h1>Muhammad Saad</h1>
-    <p class="roll">Roll No: Sp23-Bcs-019</p>
-  </header>
+<a class="skip-link" href="#main">Skip to content</a>
 
-  <main>
-    <section id="about" class="card">
-      <h2>About Me</h2>
-      <p>
-        I am an Android developer who enjoys building clean and reliable mobile apps.
-        I work mainly with Kotlin and Java, use Coroutines for smooth background work,
-        Firebase and Supabase for backend services, Dagger Hilt for dependency
-        injection, and Ktor and Retrofit for connecting to APIs.
+<div class="progress" aria-hidden="true"><div class="progress-bar" id="progress-bar"></div></div>
+
+<header class="site-header" id="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="#home" aria-label="Muhammad Saad — back to top">
+      <span class="brand-mark" aria-hidden="true">MS</span>
+      <span class="brand-text">Muhammad Saad</span>
+    </a>
+
+    <nav aria-label="Primary">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light theme">
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2"/>
+          <path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/>
+        </svg>
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1Z"/>
+        </svg>
+      </button>
+
+      <button class="icon-btn menu-btn" id="menu-btn" type="button"
+              aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
+    <div class="container">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero container" id="home">
+    <div class="hero-copy reveal">
+      <p class="eyebrow"><span class="pulse" aria-hidden="true"></span> CS Undergraduate · Android Developer</p>
+
+      <h1>Muhammad Saad</h1>
+
+      <p class="role">
+        I build <span class="typed" id="typed">Android apps</span><span class="caret" aria-hidden="true"></span>
       </p>
-    </section>
-  </main>
 
-  <footer>
+      <p class="lede">
+        Android developer who cares about clean architecture and apps that just work.
+        I write Kotlin, keep the main thread free with Coroutines, wire up backends with
+        Firebase and Supabase, and hold it all together with Dagger&nbsp;Hilt, Retrofit and Ktor.
+      </p>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#projects">
+          View projects
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h13M13 6l6 6-6 6"/>
+          </svg>
+        </a>
+      </div>
+
+      <ul class="fact-list">
+        <li>Focus<strong>Native Android</strong></li>
+        <li>Backend<strong>Firebase · Supabase</strong></li>
+        <li>Tooling<strong>Hilt · Retrofit · Ktor</strong></li>
+        <li>Roll No<strong>Sp23-Bcs-019</strong></li>
+      </ul>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="code-card">
+        <div class="code-bar">
+          <span class="dot red" aria-hidden="true"></span>
+          <span class="dot yellow" aria-hidden="true"></span>
+          <span class="dot green" aria-hidden="true"></span>
+          <span class="code-file">Saad.kt</span>
+        </div>
+<pre class="code-body"><code><span class="c-key">class</span> <span class="c-type">Saad</span> : <span class="c-type">AndroidDeveloper</span> {
+
+    <span class="c-key">private val</span> stack = <span class="c-fn">listOf</span>(
+        <span class="c-str">"Kotlin"</span>, <span class="c-str">"Java"</span>, <span class="c-str">"Coroutines"</span>,
+        <span class="c-str">"Hilt"</span>, <span class="c-str">"Retrofit"</span>, <span class="c-str">"Ktor"</span>,
+        <span class="c-str">"Firebase"</span>, <span class="c-str">"Supabase"</span>
+    )
+
+    <span class="c-key">override fun</span> <span class="c-fn">build</span>(idea: <span class="c-type">Idea</span>) = idea
+        .<span class="c-fn">design</span>()
+        .<span class="c-fn">code</span>()
+        .<span class="c-fn">test</span>()
+        .<span class="c-fn">ship</span>()
+}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" id="about">
+    <div class="section-head reveal">
+      <p class="section-kicker">About</p>
+      <h2>Reliable apps, readable code</h2>
+      <p class="section-sub">
+        I'm a Computer Science undergraduate who spends most evenings inside Android Studio.
+        My rule of thumb: if a screen needs a comment to explain what it does, it needs a refactor.
+      </p>
+    </div>
+
+    <div class="grid-3">
+      <article class="card reveal">
+        <h3>How I build</h3>
+        <p>
+          MVVM and clean layering, unidirectional data flow, and state modelled as
+          explicit sealed classes. Coroutines and Flow for anything that touches I/O,
+          so the UI never stutters.
+        </p>
+      </article>
+
+      <article class="card reveal">
+        <h3>What I care about</h3>
+        <p>
+          Offline-first behaviour, graceful error states, and screens that load instantly
+          from cache. A feature isn't done until it survives airplane mode and a flaky network.
+        </p>
+      </article>
+
+      <article class="card reveal">
+        <h3>Currently exploring</h3>
+        <p>
+          Kotlin Multiplatform, Compose performance profiling, and shipping apps through
+          a proper CI/CD pipeline — which is exactly where the Docker and nginx side of
+          this project comes in.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section container" id="skills">
+    <div class="section-head reveal">
+      <p class="section-kicker">Toolbox</p>
+      <h2>What I work with</h2>
+      <p class="section-sub">
+        The stack I reach for on a daily basis — from language fundamentals to the
+        libraries that glue an app to its backend.
+      </p>
+    </div>
+
+    <div class="grid-3">
+      <article class="card reveal">
+        <h3>Languages &amp; Core</h3>
+        <p>The foundations everything else sits on.</p>
+        <ul class="chips">
+          <li class="chip">Kotlin</li>
+          <li class="chip">Java</li>
+          <li class="chip">OOP</li>
+          <li class="chip">Coroutines</li>
+          <li class="chip">Flow</li>
+          <li class="chip">Material 3</li>
+          <li class="chip">Jetpack Compose</li>
+        </ul>
+      </article>
+
+      <article class="card reveal">
+        <h3>Architecture &amp; Async</h3>
+        <p>Structure that keeps big apps from collapsing under their own weight.</p>
+        <ul class="chips">
+          <li class="chip">MVVM</li>
+          <li class="chip">Clean Architecture</li>
+          <li class="chip">Repository Pattern</li>
+          <li class="chip">ViewModel</li>
+          <li class="chip">LiveData / StateFlow</li>
+          <li class="chip">Dagger Hilt</li>
+          <li class="chip">Room</li>
+        </ul>
+      </article>
+
+      <article class="card reveal">
+        <h3>Backend &amp; APIs</h3>
+        <p>Getting data in and out safely, with retries and real error handling.</p>
+        <ul class="chips">
+          <li class="chip">Firebase</li>
+          <li class="chip">Supabase</li>
+          <li class="chip">Retrofit</li>
+          <li class="chip">Ktor Client</li>
+          <li class="chip">REST</li>
+          <li class="chip">JSON / Moshi</li>
+          <li class="chip">Git &amp; GitHub</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section container" id="projects">
+    <div class="section-head reveal">
+      <p class="section-kicker">Selected work</p>
+      <h2>Things I've built</h2>
+      <p class="section-sub">
+        A few Android projects that show how I put the stack together end to end.
+      </p>
+    </div>
+
+    <div class="grid-3">
+      <article class="card project reveal">
+        <div class="project-top">
+          <span class="project-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 7v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7"/><path d="M8 3v4M16 3v4M4 11h16"/>
+            </svg>
+          </span>
+          <span class="project-year">2025</span>
+        </div>
+        <h3>FitTrack</h3>
+        <p>
+          An offline-first workout tracker. Set and rep data lives in Room, syncs to the
+          cloud when a connection appears, and the whole UI is driven by a single
+          StateFlow per screen.
+        </p>
+        <ul class="chips small">
+          <li class="chip">Kotlin</li>
+          <li class="chip">Room</li>
+          <li class="chip">Coroutines</li>
+          <li class="chip">MVVM</li>
+        </ul>
+      </article>
+
+      <article class="card project reveal">
+        <div class="project-top">
+          <span class="project-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5Z"/><path d="M8 7.5h7M8 11h5"/>
+            </svg>
+          </span>
+          <span class="project-year">2025</span>
+        </div>
+        <h3>CloudNotes</h3>
+        <p>
+          A notes app with real-time sync. Supabase handles auth and storage, Hilt injects
+          the repositories, and local caching keeps the app instant even when the network
+          is not.
+        </p>
+        <ul class="chips small">
+          <li class="chip">Supabase</li>
+          <li class="chip">Hilt</li>
+          <li class="chip">Compose</li>
+          <li class="chip">Flow</li>
+        </ul>
+      </article>
+
+      <article class="card project reveal">
+        <div class="project-top">
+          <span class="project-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17.5 18.5a4 4 0 0 0 .5-7.97A6 6 0 0 0 6.3 9.6a3.5 3.5 0 0 0 .2 6.9Z"/>
+            </svg>
+          </span>
+          <span class="project-year">2024</span>
+        </div>
+        <h3>WeatherNow</h3>
+        <p>
+          A small weather client built to practice API layers properly — Retrofit and Ktor
+          behind one interface, cached responses, and explicit loading, empty and error
+          states on every screen.
+        </p>
+        <ul class="chips small">
+          <li class="chip">Retrofit</li>
+          <li class="chip">Ktor</li>
+          <li class="chip">REST</li>
+          <li class="chip">Material 3</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="year">2025</span> Muhammad Saad &middot; Roll No Sp23-Bcs-019</p>
     <p>DevOps Assignment 2 &middot; plain HTML &amp; CSS, served by nginx in Docker.</p>
-  </footer>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  var root = document.documentElement;
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var themeToggle = document.getElementById('theme-toggle');
+
+  function themeLabel(theme) {
+    return theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme';
+  }
+
+  themeToggle.setAttribute('aria-label', themeLabel(root.dataset.theme));
+  themeToggle.setAttribute('title', themeLabel(root.dataset.theme));
+
+  themeToggle.addEventListener('click', function () {
+    var next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
+    themeToggle.setAttribute('aria-label', themeLabel(next));
+    themeToggle.setAttribute('title', themeLabel(next));
+    try { localStorage.setItem('saad-theme', next); } catch (e) {}
+  });
+
+  var menuBtn = document.getElementById('menu-btn');
+  var mobileMenu = document.getElementById('mobile-menu');
+
+  function closeMenu() {
+    mobileMenu.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.setAttribute('aria-label', 'Open menu');
+  }
+
+  menuBtn.addEventListener('click', function () {
+    var isOpen = mobileMenu.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(isOpen));
+    menuBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMenu();
+  });
+
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 820) closeMenu();
+  });
+
+  var progressBar = document.getElementById('progress-bar');
+  var header = document.getElementById('site-header');
+  var maxScroll = 0;
+  var lastRatio = -1;
+
+  function measure() {
+    maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+  }
+  measure();
+  window.addEventListener('resize', measure, { passive: true });
+  window.addEventListener('load', measure);
+
+  function onScroll() {
+    var top = window.pageYOffset || document.documentElement.scrollTop || 0;
+    var ratio = maxScroll > 0 ? Math.min(1, top / maxScroll) : 0;
+
+    if (Math.abs(ratio - lastRatio) > 0.0005) {
+      progressBar.style.transform = 'scaleX(' + ratio + ')';
+      lastRatio = ratio;
+    }
+    header.classList.toggle('scrolled', top > 8);
+  }
+
+  var ticking = false;
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      window.requestAnimationFrame(function () {
+        onScroll();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  onScroll();
+
+  var revealEls = document.querySelectorAll('.reveal');
+
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    revealEls.forEach(function (el) { el.classList.add('in'); });
+  } else {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+
+    revealEls.forEach(function (el) { revealObserver.observe(el); });
+  }
+
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-link'));
+  var sections = navLinks
+    .map(function (link) { return document.querySelector(link.getAttribute('href')); })
+    .filter(Boolean);
+
+  if ('IntersectionObserver' in window && sections.length) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(function (link) {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+    sections.forEach(function (section) { spy.observe(section); });
+  }
+
+  var typedEl = document.getElementById('typed');
+  var words = ['Android apps', 'clean architecture', 'Kotlin APIs', 'offline-first UX'];
+
+  if (typedEl) {
+    if (reduceMotion) {
+      typedEl.textContent = words[0];
+    } else {
+      var wordIndex = 0;
+      var charIndex = 0;
+      var deleting = false;
+
+      (function tick() {
+        var word = words[wordIndex];
+        typedEl.textContent = word.slice(0, charIndex);
+
+        var delay = deleting ? 45 : 85;
+
+        if (!deleting && charIndex === word.length) {
+          deleting = true;
+          delay = 1700;
+        } else if (deleting && charIndex === 0) {
+          deleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+          delay = 320;
+        } else {
+          charIndex += deleting ? -1 : 1;
+        }
+
+        window.setTimeout(tick, delay);
+      })();
+    }
+  }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
 </body>
 </html>
